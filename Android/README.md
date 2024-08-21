@@ -36,9 +36,9 @@ The development process for the Android app paralleled the collaborative efforts
 - **Coordination and Integration:** Regular synchronization ensured seamless integration of components into the mobile app.
 - **Testing and Refinement:** Comprehensive testing on various devices ensured a smooth and bug-free experience. Adjustments were made to enhance performance and usability.
 
-## Working Team:
-- **Ofek Baribi**
-- **Ziv Elbaz**
-- **Yuval Maaravi**
+## Development Team
+- Ofek Baribi
+- Ziv Elbaz
+- Yuval Maaravi
 
 By employing a focused approach on mobile-specific functionalities and design, the Android app aims to provide an engaging and seamless video sharing experience that complements our web platform.
