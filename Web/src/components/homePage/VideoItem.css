@@ -1,0 +1,126 @@
+/* Styles for individual video item */
+.video-item {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange elements vertically */
+  margin-bottom: 20px; /* Space between each video item */
+  width: 100%; /* Full width of parent container */
+}
+
+/* Container for the thumbnail image */
+.thumbnail-container {
+  position: relative; /* Positioning context for absolute positioning */
+  width: 100%; /* Full width of container */
+  padding-bottom: 56.25%; /* Aspect ratio for 16:9 (responsive) */
+  overflow: hidden; /* Hide overflow content */
+  border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Styles for the thumbnail image */
+.thumbnail-container img {
+  position: absolute; /* Position absolutely within its container */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width of container */
+  height: 100%; /* Full height of container */
+  object-fit: cover; /* Ensure the image covers the container */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect on thumbnail image */
+.thumbnail-container:hover img {
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+/* Duration badge overlay */
+.video-duration {
+  position: absolute; /* Position absolutely within its container */
+  bottom: 8px; /* 8px from the bottom */
+  right: 8px; /* 8px from the right */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: white; /* Text color */
+  padding: 2px 4px; /* Padding around text */
+  border-radius: 3px; /* Rounded corners */
+  font-size: 12px; /* Font size */
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Container for video information */
+.video-info {
+  display: flex; /* Use flexbox for layout */
+  margin-top: 10px; /* Space above video info */
+}
+
+/* Channel icon */
+.channel-icon {
+  flex-shrink: 0; /* Prevent from shrinking */
+  width: 36px; /* Fixed width */
+  height: 36px; /* Fixed height */
+  border-radius: 50%; /* Circular shape */
+  overflow: hidden; /* Hide overflow content */
+  margin-right: 12px; /* Space to the right */
+}
+
+/* Styles for channel icon image */
+.channel-icon img {
+  width: 100%; /* Full width of container */
+  height: 100%; /* Full height of container */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Container for video details */
+.video-details {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange elements vertically */
+  justify-content: center; /* Center content vertically */
+  text-align: left; /* Left-align text */
+}
+
+/* Video title */
+.title {
+  font-size: 18px; /* Font size */
+  font-weight: 550; /* Font weight */
+  line-height: 1.2; /* Line height */
+  color: #000; /* Text color */
+  margin: 0; /* Reset margin */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Ellipsis for overflow text */
+  width: 400px; /* Fixed width */
+  text-align: left; /* Left-align text */
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .title {
+  color: white; /* Change text color to white in dark theme */
+}
+
+/* Author name */
+.author {
+  font-size: 14px; /* Font size */
+  color: #606060; /* Text color */
+  margin: 2px 0; /* Margin */
+  margin-right: 130px; /* Space to the right */
+  width: 100px; /* Fixed width */
+}
+
+/* Dark theme adjustments for author */
+[data-theme='dark'] .author {
+  color: rgb(211, 211, 211); /* Change text color to light gray in dark theme */
+}
+
+/* Metadata */
+.metadata {
+  font-size: 14px; /* Font size */
+  color: #606060; /* Text color */
+  margin-right: 50px; /* Space to the right */
+}
+
+/* Dark theme adjustments for metadata */
+[data-theme='dark'] .metadata {
+  color: rgb(211, 211, 211); /* Change text color to light gray in dark theme */
+}
+
+/* Remove underline from links and inherit text color */
+.no-link-style {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color from parent */
+}

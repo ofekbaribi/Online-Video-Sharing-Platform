@@ -1,0 +1,20 @@
+/* src/components/VideoPlayer.css */
+
+/* Styling for the container of the video player */
+.videoPlayer {
+  position: relative; /* Positioning relative to its normal position */
+  right: 100px; /* Positioned 100 pixels to the right */
+  width: 100%; /* Full width of its container */
+}
+
+/* Styling for the video element itself */
+video {
+  width: 100%; /* Full width of its container */
+  border-radius: 3%; /* Rounded corners with 3% border radius */
+  height: auto; /* Automatically adjust height while maintaining aspect ratio */
+}
+
+/* Dark theme variant: changes applied when data-theme attribute is 'dark' */
+[data-theme='dark'] .videoPlayer {
+  background-color: #151515; /* Dark background color for the video player */
+}

@@ -1,0 +1,30 @@
+/* Styles for the sidebar containing related videos */
+.relatedVideosBar {
+  position: relative;
+  float: right;
+  width: 30%; /* Width of the sidebar */
+  height: 100%; /* Full height of the container */
+  padding-right: 20px;
+  padding-top: 20px;
+  right: 50px;
+  background-color: #ffffff; /* Default background color */
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+/* Styles for the main video container */
+.videoMain-container {
+  position: relative;
+  float: left;
+  width: 60%; /* Width of the main video container */
+  height: 10%; /* Height of the main video container */
+  padding-left: 30px;
+  padding-top: 20px;
+  margin-top: 55px;
+  left: 160px; /* Positioning offset from the left */
+}
+
+/* Dark theme styles for relatedVideosBar */
+[data-theme='dark'] .relatedVideosBar {
+  background-color: #151515; /* Dark background color for dark theme */
+}

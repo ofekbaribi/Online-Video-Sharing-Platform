@@ -1,0 +1,101 @@
+/* Styles for the register page container */
+.register-page {
+  display: flex; /* Flex container */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items at the start of the container */
+  height: 100vh; /* Full viewport height */
+  padding-top: 20px; /* Added padding at the top */
+}
+
+/* Styles for the password requirement tooltip */
+.passwordReq {
+  position: relative; /* Position relative for absolute positioning */
+  width: fit-content; /* Width based on content */
+  padding: 12px 12px; /* Padding around the element */
+  color: #4d4d4d; /* Text color */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Styles for the tooltip's arrow and content */
+.passwordReq:before,
+.passwordReq:after {
+  position: absolute; /* Position absolute for precise placement */
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Ignore pointer events */
+  left: 50%; /* Center horizontally */
+  transform: translate3d(-50%, 0%, 0); /* Adjust for centering */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  z-index: 9999; /* Higher z-index for stacking order */
+}
+
+/* Styles for the arrow of the tooltip */
+.passwordReq:before {
+  content: ""; /* Empty content */
+  border-style: solid; /* Border style */
+  border-width: 10px 10px 0 10px; /* Border dimensions */
+  border-color: #282828 transparent transparent transparent; /* Border color */
+  top: -15px; /* Position above the element */
+  transform: translateY(20px); /* Initial transform */
+}
+
+/* Styles for the tooltip content */
+.passwordReq:after {
+  content: attr(data-tooltip); /* Content from 'data-tooltip' attribute */
+  font-size: 14px; /* Font size */
+  color: #fff; /* Text color */
+  background: #282828; /* Background color */
+  padding: 8px 12px; /* Padding around the content */
+  width: max-content; /* Width based on content */
+  max-width: 200px; /* Maximum width of the tooltip */
+  border-radius: 4px; /* Rounded corners */
+  text-transform: none; /* Disable text transformation */
+  top: 0; /* Position at the top of the element */
+  transform: translate3d(-50%, 0%, 0); /* Adjust for centering */
+}
+
+/* Hover styles for the password requirement tooltip */
+.passwordReq:hover {
+  background-color: rgba(0, 0, 0, 0.12); /* Semi-transparent background color on hover */
+  cursor: help; /* Help cursor on hover */
+}
+
+/* Hover styles for the tooltip's arrow and content */
+.passwordReq:hover:before,
+.passwordReq:hover:after {
+  opacity: 1; /* Make arrow and content visible on hover */
+}
+
+/* Adjustments for custom file upload button */
+.custom-file-button input[type="file"] {
+  margin-left: -2px !important; /* Adjust file input margin */
+
+  &::-webkit-file-upload-button {
+    display: none; /* Hide default file upload button for WebKit browsers */
+  }
+
+  &::file-selector-button {
+    display: none; /* Hide default file selector button */
+  }
+}
+
+/* Hover styles for custom file upload button */
+.custom-file-button:hover label {
+  background-color: #dde0e3; /* Background color on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styles for the image preview container */
+.image-preview-container {
+  text-align: center; /* Center-align content */
+  width: 500px; /* Width of the container */
+  max-width: 100%; /* Maximum width */
+}
+
+/* Styles for images inside the image preview container */
+.image-preview-container img {
+  max-width: 100%; /* Maximum width */
+  width: 500px; /* Width of the image */
+  max-height: 200px; /* Maximum height of the image */
+  object-fit: contain; /* Maintain aspect ratio and contain within dimensions */
+}
