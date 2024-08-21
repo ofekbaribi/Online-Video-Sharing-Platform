@@ -1,3 +1,4 @@
+
 # ViewTube - Video Sharing Platform
 
 ## Overview
@@ -76,7 +77,7 @@ ViewTube is a comprehensive video-sharing platform that allows users to upload, 
 #### Prerequisites
 - **Node.js** (version 14.x or later)
 - **npm** (Node Package Manager)
-- **MongoDB** (either a running instance locally or a connection string provided in environment variables)
+- **MongoDB** (connection string provided in environment variables)
 
 #### Installation
 1. **Clone the Repository**:
@@ -117,3 +118,41 @@ ViewTube is a comprehensive video-sharing platform that allows users to upload, 
 - **Ofek Baribi**
 - **Ziv Elbaz**
 - **Yuval Maaravi**
+
+## Project Management
+
+Our team used Jira as our primary project management tool, following Agile methodologies. We organized our work into sprints, managed our tasks with user stories, and tracked progress through various stages, from backlog to completion. This approach ensured that we could respond flexibly to changes and maintain a steady development pace.
+
+### Agile Methodology in Jira
+- **Sprint Planning**: We began each sprint by defining user stories and tasks, estimating their effort, and prioritizing them based on the project goals.
+- **Daily Standups**: We conducted daily standup meetings to discuss progress, identify blockers, and adjust our tasks as necessary.
+- **Sprint Reviews and Retrospectives**: At the end of each sprint, we reviewed the completed work, demonstrated new features, and held retrospectives to discuss what went well and what could be improved.
+
+## Android Development Approach
+
+The Android application followed the MVVM (Model-View-ViewModel) architectural pattern, which helped us maintain a clear separation of concerns and made the codebase more modular, testable, and maintainable.
+
+### MVVM Implementation
+- **Model**: Represents the data layer, handling business logic and communication with the backend services (e.g., via REST APIs).
+- **View**: The UI layer that displays data and handles user interactions.
+- **ViewModel**: Acts as a bridge between the Model and the View, providing data to the UI and handling user interactions, often with LiveData for reactive programming.
+
+This structured approach allowed us to create a scalable and robust Android application, ensuring high-quality code and a smooth user experience.
+
+
+## Server-Side Development Approach
+
+The server-side of the ViewTube platform was developed using the MVC (Model-View-Controller) architectural pattern, ensuring a clean separation of concerns and a structured codebase. This pattern helped us maintain the clarity and scalability of the backend code.
+
+### MVC Implementation
+- **Model**: Defines the data structure, handling database operations and business logic.
+- **View**: Since this is a backend service, the "view" is represented by the data served to the client, typically as JSON.
+- **Controller**: Manages the incoming HTTP requests, processes data via the Model, and returns the appropriate responses.
+
+### RESTful API
+We designed the server-side application to expose RESTful APIs, which enabled seamless communication between the frontend and backend. These APIs followed standard REST principles, ensuring predictable and resource-oriented endpoints, making it easier to consume and integrate with the frontend applications.
+
+- **CRUD Operations**: Handled via RESTful routes for managing videos, comments, and user data.
+- **Authentication**: Secure API endpoints using JWT for token-based authentication.
+- **File Handling**: APIs for video file uploads and thumbnail storage, managed via RESTful endpoints.
+
