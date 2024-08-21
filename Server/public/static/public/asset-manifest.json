@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7328855c.css",
+    "main.js": "/static/js/main.060aab80.js",
+    "static/js/453.17d2f024.chunk.js": "/static/js/453.17d2f024.chunk.js",
+    "static/media/logo-dark.png": "/static/media/logo-dark.0b9a06b8346c9c597247.png",
+    "static/media/logo.png": "/static/media/logo.e27682ea16345dbcb0f1.png",
+    "static/media/like.svg": "/static/media/like.18b64f0e49772073f17dddeca4e30257.svg",
+    "static/media/dislike.svg": "/static/media/dislike.1f4ef5a4ab21af8c5851c024268ac0b3.svg",
+    "static/media/eye-slash.svg": "/static/media/eye-slash.fc94e3b390040627f5f296723b037f11.svg",
+    "static/media/share.svg": "/static/media/share.7532610d551078e588333875efb3eb40.svg",
+    "static/media/delete_icon.svg": "/static/media/delete_icon.7b2970b702d60e15cb945e21e580731f.svg",
+    "static/media/cancel_icon.svg": "/static/media/cancel_icon.d16285af062cc6a7965c6ca3384c1e01.svg",
+    "static/media/eye.svg": "/static/media/eye.ce38b16df380eb3c2bee70647889a8f2.svg",
+    "index.html": "/index.html",
+    "static/media/info-circle.svg": "/static/media/info-circle.9f50ff1338fb1ea6dbbd4aac33746819.svg",
+    "static/media/fire.svg": "/static/media/fire.4bf557ac1f031caaef3945d19c68f066.svg",
+    "static/media/download.svg": "/static/media/download.7aba2d4661f92fcb30b54a6180b3cdb8.svg",
+    "static/media/home.svg": "/static/media/home.c1f330e6230dfdef38e8b69247d19035.svg",
+    "static/media/upload.svg": "/static/media/upload.50c1fd24d1cda14028b98fcb194c08c0.svg",
+    "static/media/edit_icon.svg": "/static/media/edit_icon.5cca96bbf4bff6375bc6b03f934bd6fe.svg",
+    "static/media/tick_icon.svg": "/static/media/tick_icon.ba3235787a6833b5b02a83b50cbe67c0.svg",
+    "static/media/menu.svg": "/static/media/menu.898c3358972d7809b49c2cc806c01f1d.svg",
+    "static/media/music.svg": "/static/media/music.4f04c260410fb1b5ddeda1df479b6a59.svg",
+    "static/media/search.svg": "/static/media/search.e95ac97495d275eb9a3c0e648829c5bf.svg",
+    "main.7328855c.css.map": "/static/css/main.7328855c.css.map",
+    "main.060aab80.js.map": "/static/js/main.060aab80.js.map",
+    "453.17d2f024.chunk.js.map": "/static/js/453.17d2f024.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7328855c.css",
+    "static/js/main.060aab80.js"
+  ]
+}
