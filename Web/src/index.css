@@ -1,0 +1,21 @@
+/* styles.css */
+
+:root {
+  --background-color-light: #ffffff;
+  --background-color-dark: #151515;
+
+}
+
+/* Light mode styles */
+body[data-theme='light'] {
+  background-color: var(--background-color-light);
+  color: #000000;
+}
+
+
+
+/* Dark mode styles */
+body[data-theme='dark'] {
+  background-color: var(--background-color-dark);
+  color: #ffffff;
+}

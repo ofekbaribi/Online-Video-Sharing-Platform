@@ -1,0 +1,139 @@
+/* Global body styling */
+body {
+  font-family: Arial, sans-serif; /* Set font family for the entire document */
+}
+
+/* Styles for the comment section */
+.comment-section {
+  position: relative; /* Positioned relative to its normal position */
+  right: 100px; /* Move 100px to the right */
+  width: 600px; /* Fixed width */
+  margin-bottom: 20px; /* Margin at the bottom */
+}
+
+/* Styles for the header of the comment section */
+.comment-header {
+  display: flex; /* Flex container */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  margin-bottom: 10px; /* Margin at the bottom */
+}
+
+/* Styling for the comment count */
+.comment-count {
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Styling for the comment input container */
+.comment-input {
+  display: flex; /* Flex container */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 10px; /* Margin at the bottom */
+}
+
+/* Styling for the profile image in comments */
+.profile-image {
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  border-radius: 50%; /* Circle shape */
+  margin-right: 10px; /* Margin to the right */
+}
+
+/* Styling for the submit button */
+.submit-button {
+  padding: 10px 20px; /* Padding */
+  background-color: #1a73e8; /* Blue background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Cursor pointer */
+  margin-left: 10px; /* Margin to the left */
+}
+
+/* Styling for the input box in comments */
+.input-box {
+  flex-grow: 1; /* Grow to fill available space */
+  padding: 10px; /* Padding */
+  border: 1px solid #ddd; /* Border style */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+}
+
+/* List styling */
+ul {
+  text-align: left; /* Left-aligned text */
+  position: relative; /* Positioned relative to its normal position */
+  float: left; /* Float to the left */
+  list-style: none; /* Remove default list style */
+}
+
+/* Styling for list items */
+li {
+  margin-bottom: 10px; /* Margin at the bottom */
+  padding: 10px; /* Padding */
+  display: flex; /* Flex container */
+  align-items: center; /* Align items vertically */
+}
+
+/* Styling for comment text within list items */
+.comment-text {
+  flex-grow: 1; /* Grow to fill available space */
+}
+
+/* Styling for comment actions (edit and delete buttons) */
+.comment-actions {
+  margin-left: 10px; /* Margin to the left */
+  display: flex; /* Flex container */
+  gap: 5px; /* Gap between child elements */
+}
+
+/* Common styling for action buttons */
+.action-button {
+  padding: 5px 10px; /* Padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor pointer */
+  background: transparent; /* Transparent background */
+}
+
+/* Styling for edit and delete button icons */
+.edit-button img,
+.delete-button img {
+  width: 16px; /* Width */
+  height: 16px; /* Height */
+}
+
+/* Styling for save and cancel button icons */
+.save-button img,
+.cancel-button img {
+  width: 20px; /* Width */
+  height: 20px; /* Height */
+}
+
+/* Dark theme styles for button icons */
+[data-theme='dark'] .delete-button img,
+[data-theme='dark'] .edit-button img,
+[data-theme='dark'] .save-button img,
+[data-theme='dark'] .cancel-button img {
+  filter: invert(100%); /* Invert colors for dark theme */
+}
+
+/* Hover effects for edit and delete buttons */
+.edit-button img:hover,
+.delete-button img:hover,
+.save-button img:hover,
+.cancel-button img:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+  transition: 0.2s; /* Smooth transition */
+}
+
+/* Styling for input box in edit mode */
+.edit-input {
+  flex-grow: 1; /* Grow to fill available space */
+  padding: 5px; /* Padding */
+  border: 1px solid #ddd; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  margin-right: 10px; /* Margin to the right */
+}

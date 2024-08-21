@@ -1,0 +1,298 @@
+/* Navbar styles */
+nav {
+  padding: 1px 2%; /* Padding inside the navbar */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between navbar sections */
+  align-items: center; /* Center items vertically */
+  position: fixed; /* Fixed position at the top */
+  width: 100%; /* Full width */
+  top: 0; /* Position at the top */
+  z-index: 10; /* Higher stacking order */
+}
+
+/* Dark theme for navbar */
+[data-theme='dark'] nav {
+  background: black; /* Dark background */
+}
+
+/* Light theme for navbar */
+[data-theme='light'] nav {
+  background: white; /* Light background */
+}
+
+/* Navbar left, middle, and right sections */
+.nav-left,
+.nav-middle,
+.nav-right {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+}
+
+/* Styles for menu icon */
+.nav-left .menu-icon {
+  width: 22px; /* Width of the menu icon */
+  margin-right: 25px; /* Margin to the right */
+  cursor: pointer; /* Cursor style */
+  position: relative; /* Relative position */
+  z-index: 11; /* Higher stacking order */
+}
+
+/* Dark theme for menu icon */
+[data-theme='dark'] .nav-left .menu-icon {
+  filter: invert(100%); /* Invert colors for dark theme */
+}
+
+/* Styles for logo */
+.nav-left .logo {
+  width: 200px; /* Width of the logo */
+}
+
+/* Styles for search box */
+.nav-middle {
+  position: relative; /* Relative positioning */
+  flex: 1; /* Take up remaining space */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center horizontally */
+}
+
+.nav-middle .search-box {
+  border: 1px solid #ccc; /* Border around the search box */
+  margin-right: 200px; /* Margin to the right */
+  width: 500px; /* Fixed width */
+  padding: 8px 12px; /* Padding inside the search box */
+  border-radius: 25px; /* Rounded border */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-middle .search-box input {
+  width: 100%; /* Fill available width */
+  font-size: 15px; /* Font size for text */
+  border: 0; /* Remove border */
+  outline: 0; /* Remove outline */
+  background: transparent; /* Transparent background */
+  color: black; /* Text color */
+}
+
+/* Dark theme for search box input */
+[data-theme='dark'] .nav-middle .search-box input {
+  color: white; /* Text color in dark theme */
+}
+
+.nav-middle .search-box img {
+  width: 22px; /* Width of the search icon */
+  cursor: pointer; /* Cursor style */
+}
+
+/* Styles for right section */
+.nav-right .upload-icon {
+  width: 25px; /* Width of the upload icon */
+  margin-right: 25px; /* Margin to the right */
+}
+
+/* Dark theme for upload icon */
+[data-theme='dark'] .nav-right .upload-icon {
+  filter: invert(100%); /* Invert colors for dark theme */
+}
+
+.nav-right .upload-icon:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+  transition: 0.4s; /* Smooth transition */
+}
+
+/* Styles for profile picture */
+.profile-pic img {
+  width: 40px; /* Width of the profile picture */
+  height: 40px; /* Height of the profile picture */
+  margin-right: 10px; /* Margin to the right */
+}
+
+/* Styles for profile picture buttons */
+.profile-pic button {
+  cursor: pointer; /* Cursor style */
+  border: 0px; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-weight: 600; /* Font weight */
+  margin: 0 4px; /* Margin around buttons */
+  width: 90px; /* Fixed width */
+  max-width: 90px; /* Maximum width */
+  height: 40px; /* Height of buttons */
+  padding: 10px 0; /* Padding inside buttons */
+  transition: 0.4s; /* Smooth transition */
+  text-decoration: none; /* No underline for links */
+}
+
+.profile-pic button:hover {
+  background-color: #ececec; /* Background color on hover */
+}
+
+/* Dark theme for profile picture buttons */
+[data-theme='dark'] .profile-pic button {
+  color: rgb(255, 88, 88); /* Text color in dark theme */
+  background-color: black; /* Background color in dark theme */
+}
+
+/* Toggle container */
+.dark-mode-toggle {
+  display: inline-block; /* Inline block display */
+}
+
+/* Hide default checkbox */
+.dark-mode-checkbox {
+  display: none; /* Hide checkbox */
+}
+
+/* Slider */
+.dark-mode-slider {
+  position: sticky; /* Sticky positioning */
+  display: inline-block; /* Inline block display */
+  width: 60px; /* Width of the slider */
+  height: 20px; /* Height of the slider */
+  background-color: #aeaeae; /* Background color of the slider */
+  border-radius: 20px; /* Rounded border */
+}
+
+/* Slider button */
+.dark-mode-slider::before {
+  position: absolute; /* Absolute positioning */
+  content: ''; /* Empty content */
+  height: 16px; /* Height of the slider button */
+  width: 16px; /* Width of the slider button */
+  left: 2px; /* Position from the left */
+  bottom: 2px; /* Position from the bottom */
+  background-color: white; /* Background color of the slider button */
+  border-radius: 50%; /* Rounded border */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Checked state for slider */
+.dark-mode-checkbox:checked + .dark-mode-label .dark-mode-slider::before {
+  transform: translateX(20px); /* Move slider button to the checked position */
+}
+
+/* Label for the dark mode toggle */
+.dark-mode-label {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
+  width: 90px; /* Width of the label */
+  height: 20px; /* Height of the label */
+  border-radius: 20px; /* Rounded border */
+  cursor: pointer; /* Cursor style */
+  padding: 2px; /* Padding inside the label */
+}
+
+/* Text inside the dark mode toggle */
+.dark-mode-text {
+  font-size: 12px; /* Font size */
+  margin: 0 4px; /* Margin around the text */
+}
+
+/* Styles for links in the right section */
+.nav-right .log-reg p {
+  display: inline-block; /* Inline block display */
+  margin-right: 10px; /* Margin to the right */
+  align-items: center; /* Center items vertically */
+  height: 15px; /* Height of the link */
+}
+
+/* Styles for sign-in and register container */
+.nav-right .container-sign {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  margin-right: 10px; /* Margin to the right */
+  text-align: center; /* Center align text */
+}
+
+/* Styles for anchor tag in sign-in and register container */
+.container-sign a {
+  text-decoration: none; /* No underline for links */
+}
+
+/* Styles for sign-in and register buttons */
+.container-sign p {
+  cursor: pointer; /* Cursor style */
+  border: 0; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-weight: 600; /* Font weight */
+  margin: 0 3px; /* Margin around buttons */
+  width: 90px; /* Fixed width */
+  padding: 10px 0; /* Padding inside buttons */
+  transition: 0.4s; /* Smooth transition */
+  text-decoration: none; /* No underline for links */
+}
+
+/* Styles for register button */
+.reg {
+  width: 100%; /* Full width */
+  height: fit-content; /* Increased height for buttons */
+  background-color: #ffffff; /* Background color */
+  color: rgb(255, 0, 0); /* Text color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Cursor style */
+}
+
+/* Dark theme for register button */
+[data-theme='dark'] .reg {
+  color: rgb(255, 0, 0); /* Text color in dark theme */
+  background-color: black; /* Background color in dark theme */
+}
+
+/* Styles for log in button */
+.log {
+  width: 100%; /* Full width */
+  height: fit-content; /* Increased height for buttons */
+  background-color: #ffffff; /* Background color */
+  color: rgb(255, 0, 0); /* Text color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Cursor style */
+}
+
+/* Dark theme for log in button */
+[data-theme='dark'] .log {
+  color: rgb(255, 0, 0); /* Text color in dark theme */
+  background-color: black; /* Background color in dark theme */
+}
+
+/* Hover effect on sign-in and register buttons */
+.container-sign p:hover {
+  background-color: #ececec; /* Background color on hover */
+}
+
+/* Dark theme hover effect on sign-in and register buttons */
+[data-theme='dark'] .container-sign p:hover {
+  background-color: #2b2b2b; /* Dark background color on hover */
+}
+
+/* Styles for logout button */
+.profile-pic .logout {
+    height: fit-content;  
+    background-color: #ffffff; 
+    color: rgb(255, 0, 0);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark theme for logout button */
+[data-theme='dark'] .profile-pic .logout {
+  color: rgb(255, 0, 0); /* Text color in dark theme */
+  background-color: black; /* Background color in dark theme */
+}
+
+/* Hover effect on logout button */
+.profile-pic .logout:hover {
+  background-color: #ececec; /* Background color on hover */
+}
+
+/* Dark theme hover effect on logout button */
+[data-theme='dark'] .profile-pic .logout:hover {
+  background-color: #2b2b2b; /* Dark background color on hover */
+}
+

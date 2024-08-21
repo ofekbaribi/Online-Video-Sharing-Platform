@@ -1,0 +1,100 @@
+/* Styling for the video title */
+.video-title {
+  position: relative; /* Positioned relative to its normal position */
+  font-size: 20px; /* Font size */
+  margin-bottom: 10px; /* Bottom margin */
+  text-align: left; /* Left-aligned text */
+  right: 100px; /* Positioned 100 pixels to the right */
+  max-width: 100%; /* Maximum width */
+}
+
+/* Styling for the video description */
+.video-description {
+  position: relative; /* Positioned relative to its normal position */
+  background-color: hsl(0, 0%, 96%); /* Light gray background */
+  text-align: left; /* Left-aligned text */
+  font-size: 13px; /* Font size */
+  padding: 15px; /* Padding inside the description box */
+  border-radius: 10px; /* Rounded corners */
+  right: 100px; /* Positioned 100 pixels to the right */
+  max-width: 100%; /* Maximum width */
+  margin: 20px auto; /* Center align with margin */
+  color: #000; /* Text color */
+}
+
+/* Dark theme styling for video details */
+[data-theme='dark'] .videoDetails {
+  background-color: #151515; /* Dark background color */
+}
+
+/* Dark theme styling for video title */
+[data-theme='dark'] .video-title {
+  color: white; /* White text color */
+}
+
+/* Styling for input box */
+.input-box {
+  flex-grow: 1; /* Grow to fill available space */
+  padding: 10px; /* Padding inside the input box */
+  border: 1px solid #ddd; /* Border style */
+  border-radius: 20px; /* Rounded corners */
+  width: 600px; /* Fixed width */
+  max-width: 100%; /* Maximum width */
+  font-size: 16px; /* Font size */
+}
+
+/* Styling for action buttons */
+.action-button {
+  padding: 5px 10px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor pointer */
+  background: transparent; /* Transparent background */
+}
+
+/* Styling for edit button icon */
+.description-edit-button img {
+  width: 16px; /* Icon width */
+  height: 16px; /* Icon height */
+}
+
+/* Styling for save and cancel button icons */
+.description-save-button img,
+.description-cancel-button img {
+  width: 20px; /* Icon width */
+  height: 20px; /* Icon height */
+}
+
+/* Styling for edit button icon */
+.edit-button img {
+  width: 16px; /* Icon width */
+  height: 16px; /* Icon height */
+}
+
+/* Styling for save and cancel button icons */
+.save-button img,
+.cancel-button img {
+  width: 20px; /* Icon width */
+  height: 20px; /* Icon height */
+}
+
+/* Styling for editable video description */
+.edit-video-description {
+  position: relative; /* Positioned relative to its normal position */
+  background-color: hsl(0, 0%, 96%); /* Light gray background */
+  text-align: left; /* Left-aligned text */
+  font-size: 13px; /* Font size */
+  border-radius: 10px; /* Rounded corners */
+  width: 850px; /* Fixed width */
+  max-width: 100%; /* Maximum width */
+  color: #000; /* Text color */
+}
+
+/* Styling for delete button container */
+.delete-button-container {
+  display: flex; /* Flex container */
+  align-items: center; /* Align items vertically center */
+  justify-content: center; /* Center align content */
+  margin-right: 200px; /* Right margin */
+  margin-bottom: 10px; /* Bottom margin */
+}

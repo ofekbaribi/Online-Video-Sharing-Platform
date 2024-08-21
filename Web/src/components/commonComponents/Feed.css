@@ -1,0 +1,59 @@
+/* Feed container */
+.feed {
+  margin-top: 60px; /* Adds space from the top */
+  font-family: "Roboto", sans-serif; /* Font family for the feed */
+}
+
+/* Video grid layout */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive grid columns */
+  grid-gap: 20px; /* Gap between grid items */
+}
+
+/* Video link styling */
+.video-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits text color */
+}
+
+/* Video item container */
+.video-item {
+  border-radius: 8px; /* Rounded corners for video items */
+  overflow: hidden; /* Ensures content within video items stays contained */
+}
+
+/* Video thumbnail image */
+.video-thumbnail img {
+  width: 100%; /* Full width inside container */
+  height: 175px; /* Fixed height */
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+/* Hover effect on video thumbnails */
+.video-thumbnail:hover img {
+  transform: scale(1.05); /* Scale up on hover for visual feedback */
+}
+
+/* Video details container */
+.video-details {
+  width: 200px; /* Fixed width */
+  margin-top: 3px; /* Margin spacing */
+  margin-left: 10px; /* Left margin */
+  justify-self: flex-end; /* Aligns to end within grid layout */
+}
+
+/* Responsive layout for smaller screens */
+@media all and (max-width: 315px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Single column layout */
+  }
+
+  .video-details {
+    width: 100%; /* Full width */
+    margin-top: 10px; /* Increased top margin */
+    margin-left: 0; /* No left margin */
+    justify-self: center; /* Center align within grid */
+    text-align: center; /* Center align text */
+  }
+}

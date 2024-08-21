@@ -1,0 +1,57 @@
+/* Styles for the sidebar */
+.sidebar {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    width: 200px; /* Initial width of the sidebar */
+    height: 100%; /* Full height of the viewport */
+    z-index: 1000; /* Ensures the sidebar appears above other content */
+    background: white; /* Default background color */
+    top: 64px; /* Position below the navbar */
+  }
+  
+  /* Dark theme adjustments for sidebar */
+  [data-theme='dark'] .sidebar {
+    background: rgb(17, 17, 17); /* Dark background color */
+  }
+  
+  /* Closed state of the sidebar */
+  .sidebar.closed {
+    width: 80px; /* Reduced width when sidebar is closed */
+  }
+  
+  /* Styles for shortcut links container */
+  .shortcut-links {
+    padding: 20px; /* Padding inside the shortcut links container */
+  }
+  
+  /* Styles for each side link item */
+  .side-links {
+    display: flex; /* Flexbox layout for side links */
+    align-items: center; /* Center-align items vertically */
+    padding: 15px 0; /* Vertical padding */
+  }
+  
+  /* Hover effect for side links */
+  .side-links:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  /* Default font size for text in side links */
+  .side-links p {
+    font-size: 12px; /* Default font size */
+  }
+  
+  /* Increase font size for text in side links when sidebar is open */
+  .sidebar.open .side-links p {
+    font-size: 14px;
+  }
+  
+  /* Adjust margin for image in side links when sidebar is open */
+  .sidebar.open .side-links img {
+    margin-right: 10px;
+  }
+  
+  /* Dark theme adjustment for images in sidebar */
+  [data-theme='dark'] .sidebar img {
+    filter: invert(100%); /* Invert image colors for better visibility in dark theme */
+  }
+  
