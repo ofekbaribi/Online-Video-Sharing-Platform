@@ -1,0 +1,11 @@
+/* Styles for the home page */
+.homePage {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Arrange children in a row (horizontal) */
+}
+
+/* Styles for containers within the home page */
+.container {
+  flex: 1; /* Flexible container to expand and fill available space */
+  padding: 20px; /* Padding around the container */
+}

@@ -1,0 +1,18 @@
+/* Styles for the video grid container */
+.video-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive grid columns: minimum 400px width, fluid columns */
+  grid-gap: 20px; /* Gap between grid items */
+}
+
+/* Styles for the video list */
+.video-list {
+  position: relative; /* Positioned relative to its normal position */
+  padding: 10px; /* Padding around the video list */
+}
+
+/* Styles for video links */
+.video-link {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+}

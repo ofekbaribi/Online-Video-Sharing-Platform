@@ -1,0 +1,65 @@
+/* Styles for each search result item */
+.search-result-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: flex-start; /* Align items at the start of the cross axis */
+  padding: 10px; /* Add padding around the search result item */
+}
+
+/* Thumbnail container styles within search result item */
+.search-result-item .thumbnail-container-search {
+  flex: 0 0 auto; /* Prevent thumbnail container from growing */
+  margin-right: 10px; /* Margin to the right of the thumbnail */
+}
+
+/* Thumbnail image styles within search result item */
+.search-result-item .thumbnail-container-search img {
+  width: 400px; /* Fixed width for the thumbnail */
+  height: 250px; /* Fixed height for the thumbnail */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Video details container within search result item */
+.search-result-item .video-details {
+  flex-grow: 1; /* Allow video details to grow and take remaining space */
+}
+
+/* Title styles within search result item */
+.search-result-item .title {
+  font-size: 18px; /* Font size */
+  margin-bottom: 5px; /* Space below the title */
+  color: #030303; /* Text color */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Ellipsis for overflow text */
+  white-space: nowrap; /* Prevent wrapping of text */
+  text-align: left; /* Left-align text */
+}
+
+/* Dark theme adjustments for title */
+[data-theme='dark'] .search-result-item .title {
+  color: white; /* Change text color to white in dark theme */
+}
+
+/* Author styles within search result item */
+.search-result-item .author {
+  font-size: 16px; /* Font size */
+  color: #606060; /* Text color */
+  width: 100px; /* Fixed width */
+  text-align: left; /* Left-align text */
+}
+
+/* Dark theme adjustments for author */
+[data-theme='dark'] .search-result-item .author {
+  color: rgb(211, 211, 211); /* Change text color to light gray in dark theme */
+}
+
+/* Metadata styles within search result item */
+.search-result-item .metadata {
+  font-size: 14px; /* Font size */
+  color: #606060; /* Text color */
+  text-align: left; /* Left-align text */
+}
+
+/* Dark theme adjustments for metadata */
+[data-theme='dark'] .search-result-item .metadata {
+  color: rgb(211, 211, 211); /* Change text color to light gray in dark theme */
+}

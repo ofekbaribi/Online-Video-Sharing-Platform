@@ -1,0 +1,77 @@
+/* Styles for the upload page container */
+.upload-page {
+  background: rgb(135, 176, 255);
+  background: linear-gradient(142deg, rgba(135, 176, 255, 1) 0%, rgba(198, 0, 0, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* Minimum height of the viewport */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  display: flex; /* Flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+}
+
+/* Styles for the content container inside upload page */
+.upload-page .container {
+  justify-content: center; /* Center content horizontally */
+  width: 100%; /* Full width of its container */
+  max-width: 800px; /* Maximum width of the content */
+  padding: 20px; /* Padding around the content */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+  overflow: hidden; /* Ensure the container does not overflow */
+}
+
+/* Heading styles for upload page */
+.upload-page h2 {
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Text color */
+  font-family: 'Poppins', sans-serif; /* Font family */
+  font-weight: 700; /* Font weight (bold) */
+}
+
+/* Styles for the form inside upload page */
+.upload-page form {
+  display: flex; /* Flex container with column direction */
+  flex-direction: column; /* Stack form elements vertically */
+}
+
+/* Styles for form elements inside upload page form */
+.upload-page form div {
+  margin-bottom: 20px; /* Space between form sections */
+}
+
+/* Label styles for form inputs */
+.upload-page form label {
+  margin-bottom: 5px; /* Space below labels */
+  font-weight: bold; /* Bold font weight */
+  color: #555; /* Text color */
+}
+
+/* Input styles for form inputs */
+.upload-page form input {
+  padding: 10px; /* Padding around input */
+  border: 1px solid #ccc; /* Border with light gray color */
+  border-radius: 4px; /* Rounded corners */
+  outline: none; /* Remove outline on focus */
+}
+
+/* Button styles for form submission */
+.upload-page form button {
+  padding: 12px 20px; /* Padding inside the button */
+  background-color: #007BFF; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover styles for form button */
+.upload-page form button:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}

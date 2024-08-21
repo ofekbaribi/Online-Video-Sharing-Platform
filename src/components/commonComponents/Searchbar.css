@@ -1,0 +1,18 @@
+/* Styles for the search box */
+.search-box {
+    border: 1px solid #ccc; /* Border around the search box */
+    padding: 8px 12px; /* Padding inside the search box */
+    border-radius: 25px; /* Rounded border radius */
+    display: flex; /* Flexbox layout for alignment */
+    align-items: center; /* Center-align items vertically */
+  }
+  
+  /* Styles for the input field inside the search box */
+  .search-box input {
+    width: 100%; /* Full width of the container */
+    font-size: 15px; /* Font size for text */
+    border: 0; /* Remove border */
+    outline: 0; /* Remove outline */
+    background: transparent; /* Transparent background */
+  }
+  
