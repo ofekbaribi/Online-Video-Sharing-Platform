@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkModeBg">#151515</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="light_border_color">#F1F1F1</color>
+    <color name="grey">#ECECEC</color>
+    <color name="exo_played_color">#FF0000</color>
+    <color name="exo_scrubber_color">#00FF00</color>
+    <color name="exo_buffered_color">#0000FF</color>
+    <color name="exo_unplayed_color">#CCCCCC</color>
+    <color name="exo_ad_marker_color">#FFFF00</color>
+    <color name="exo_played_ad_marker_color">#FF00FF</color>
+    <color name="sidemenu_header">#F1EAEA</color>
+    <color name="sidemenu_dark">#0D0D10</color>
+    <color name="dark_buffer">#BE000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="search_dark">#272727</color>
+
+</resources>
