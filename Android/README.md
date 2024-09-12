@@ -41,10 +41,6 @@ The development process for the Android app paralleled the collaborative efforts
 - **Coordination and Integration:** Regular synchronization ensured seamless integration of components into the mobile app.
 - **Testing and Refinement:** Comprehensive testing on various devices ensured a smooth and bug-free experience. Adjustments were made to enhance performance and usability.
 
-## Branching Information
-- Part 1 (Main Android Features): All the core functionalities of the Android application are located in the main branch.
-- Part 3 (Server Implementation): For the server-side implementation and integration, check the server_implement branch.
-
 ## Working Team:
 - **Ofek Baribi**
 - **Ziv Elbaz**
