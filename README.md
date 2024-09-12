@@ -4,6 +4,15 @@
 ## Overview
 ViewTube is a comprehensive video-sharing platform that allows users to upload, watch, and interact with videos across multiple platforms, including web and mobile. The platform includes features such as video playback, commenting, like/dislike functionality, video uploading, and user management. This document details the structure and implementation of the ViewTube project, covering the Web frontend, Android mobile application, and Server-Side backend.
 
+## Screenshots
+![Screenshot 1](./Server/public/static/project screenshots/5.png)
+![Screenshot 2](./Server/public/static/project screenshots/11.png)
+![Screenshot 3](./Server/public/static/project screenshots/9.png)
+![Screenshot 4](./Server/public/static/project screenshots/12.png)
+![Screenshot 5](./Server/public/static/project screenshots/2.png)
+![Screenshot 6](./Server/public/static/project screenshots/1.png)
+![Screenshot 7](./Server/public/static/project screenshots/4.png)
+
 ## Features
 
 ### Shared Features (Across Web and Android)
