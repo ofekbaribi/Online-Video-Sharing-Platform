@@ -11,6 +11,7 @@ ViewTube is a comprehensive video-sharing platform that allows users to upload, 
 ![Screenshot 6](./Server/public/static/project%20screenshots/1.png)
 ![Screenshot 7](./Server/public/static/project%20screenshots/4.png)
 ![Screenshot 2](./Server/public/static/project%20screenshots/11.jpg)
+
 ![Screenshot 4](./Server/public/static/project%20screenshots/12.jpg)
 
 ## Features
