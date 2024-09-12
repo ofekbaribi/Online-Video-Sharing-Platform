@@ -1,97 +1,70 @@
 package com.example.viewtube.managers;
 
-import android.util.Log;
-import android.widget.EditText;
-import android.widget.Toast;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import android.view.inputmethod.InputMethodManager;
+
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.viewtube.CommentsAdapter;
+import com.example.viewtube.adapters.CommentsAdapter;
+import com.example.viewtube.entities.Comment;
+import com.example.viewtube.viewmodels.CommentViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
+// Manages comments, interacts with ViewModel and RecyclerView
 public class CommentsManager implements CommentsAdapter.OnCommentActionListener {
 
-    private Map<Integer, List<SessionManager.Comment>> videoCommentsMap;
-    private int videoId;
+    private CommentViewModel commentViewModel; // ViewModel for handling comments
+    private CommentsAdapter commentsAdapter; // Adapter for displaying comments in RecyclerView
 
-    private String username;
-    private EditText commentInput;
-    private RecyclerView commentsRecyclerView;
-    private CommentsAdapter commentsAdapter;
+    // Constructor initializes the manager with ViewModel, RecyclerView, and current username
+    public CommentsManager(CommentViewModel commentViewModel, RecyclerView commentsRecyclerView, String username) {
+        this.commentViewModel = commentViewModel;
+        commentsAdapter = new CommentsAdapter(null, username, this); // Initialize adapter with null comments
+        commentsRecyclerView.setAdapter(commentsAdapter); // Set adapter for the RecyclerView
 
-    // Constructor to initialize the CommentsManager with video ID, comments map, comment input field, and comments RecyclerView
-    public CommentsManager(int videoId, Map<Integer, List<SessionManager.Comment>> videoCommentsMap, EditText commentInput, RecyclerView commentsRecyclerView, String username) {
-        this.videoId = videoId;
-        this.videoCommentsMap = videoCommentsMap;
-        this.commentInput = commentInput;
-        this.commentsRecyclerView = commentsRecyclerView;
-        this.username = username;
-        initializeComments();
+        // Observe changes in comments LiveData and update the adapter
+        commentViewModel.getCommentsLiveData().observeForever(comments -> {
+            commentsAdapter.setComments(comments); // Update the adapter's comments list
+        });
     }
 
-    // Method to initialize comments for the current video
-    private void initializeComments() {
-        List<SessionManager.Comment> comments = videoCommentsMap.get(videoId);
+    // Add a new comment to the adapter and notify the adapter of the change
+    public void addCommentToAdapter(Comment comment) {
+        List<Comment> comments = commentsAdapter.getComments();
+
         if (comments == null) {
-            comments = new ArrayList<SessionManager.Comment>();
-            videoCommentsMap.put(videoId, comments);
+            // If comments list is null, initialize it
+            comments = new ArrayList<>();
+            commentsAdapter.setComments(comments); // Set the initialized list in the adapter
         }
-        commentsAdapter = new CommentsAdapter(comments, username, this);
-        commentsRecyclerView.setLayoutManager(new LinearLayoutManager(commentsRecyclerView.getContext()));
-        commentsRecyclerView.setAdapter(commentsAdapter);
+
+        comments.add(comment); // Add the new comment
+        commentsAdapter.notifyItemInserted(comments.size() - 1); // Notify adapter of the inserted item
     }
 
-    // Method to add a comment to the current video's comments list
-    public void addComment(String commentText, String username) {
-        if (!commentText.isEmpty()) {
-            List<SessionManager.Comment> comments = videoCommentsMap.get(videoId);
-            if (comments == null) {
-                comments = new ArrayList<SessionManager.Comment>();
-                videoCommentsMap.put(videoId, comments);
-            }
-
-            comments.add(new SessionManager.Comment(username, commentText));
-            commentsAdapter.notifyItemInserted(comments.size() - 1);
-            commentInput.setText("");
-
-        } else {
-            Toast.makeText(commentInput.getContext(), "Enter a comment", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public void editComment(int position, String newCommentText) {
-        List<SessionManager.Comment> comments = videoCommentsMap.get(videoId);
-        if (comments != null && position < comments.size()) {
-            SessionManager.Comment comment = comments.get(position);
-            comment.setComment(newCommentText);
-            commentsAdapter.notifyItemChanged(position);
-        } else {
-            Toast.makeText(commentInput.getContext(), "Comment not found", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public void deleteComment(int position) {
-        List<SessionManager.Comment> comments = videoCommentsMap.get(videoId);
-        if (comments != null && position < comments.size()) {
-            comments.remove(position);
-            commentsAdapter.notifyItemRemoved(position);
-        } else {
-            Toast.makeText(commentInput.getContext(), "Comment not found", Toast.LENGTH_SHORT).show();
-        }
-    }
-
+    // Handle editing of a comment (Triggered by the adapter)
     @Override
     public void onEditComment(int position, String newCommentText) {
-        editComment(position, newCommentText);
+        Comment comment = commentsAdapter.getComments().get(position); // Get the comment at the specified position
+        comment.setText(newCommentText); // Update comment text
+        commentViewModel.updateComment(comment); // Update the comment in the ViewModel
     }
 
+    // Handle deletion of a comment (Triggered by the adapter)
     @Override
     public void onDeleteComment(int position) {
-        deleteComment(position);
+        Comment comment = commentsAdapter.getComments().get(position); // Get the comment to delete
+        List<Comment> comments = commentsAdapter.getComments();
+        commentViewModel.deleteComment(comment.getId(), comment.getVideoId()); // Delete the comment via ViewModel
+        comments.remove(comment); // Remove the comment from the list
+        commentsAdapter.notifyItemRemoved(position); // Notify adapter that an item was removed
     }
 
-
+    // Clear all comments from the adapter
+    public void clearComments() {
+        List<Comment> comments = commentsAdapter.getComments(); // Get the current comments
+        comments.clear(); // Clear the comments list
+        commentsAdapter.notifyDataSetChanged(); // Notify the adapter that the data set has changed
+    }
 }
