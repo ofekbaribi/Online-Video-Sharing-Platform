@@ -32,9 +32,11 @@ The development process for the server-side code involved collaborative effort a
 - **Integration**: Seamless integration with the frontend was ensured through RESTful APIs, enabling smooth data flow between client and server.
 - **Testing and Refinement**: Rigorous testing was conducted to validate API endpoints, data handling, and security measures. Refinements were made based on testing results and feedback.
 
-By adhering to best practices, effective collaboration, and rigorous testing, we successfully developed a scalable backend for ViewTube, complementing the frontend's user-centric features and enhancing overall user experience.
-
-## Development Team
+  ## Development Team
 - Ofek Baribi
 - Ziv Elbaz
 - Yuval Maaravi
+
+By adhering to best practices, effective collaboration, and rigorous testing, we successfully developed a scalable backend for ViewTube, complementing the frontend's user-centric features and enhancing overall user experience.
+
+
