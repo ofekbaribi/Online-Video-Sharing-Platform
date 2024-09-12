@@ -2,7 +2,7 @@
 # ViewTube - Video Sharing Platform
 
 ## Overview
-ViewTube is a comprehensive video-sharing platform that allows users to upload, watch, and interact with videos across multiple platforms, including web and mobile. The platform includes features such as video playback, commenting, like/dislike functionality, video uploading, and user management. This document details the structure and implementation of the ViewTube project, covering the Web frontend, Android mobile application, and Server-Side backend.
+ViewTube is a comprehensive video-sharing platform that allows users to upload, watch, and interact with videos across multiple platforms, including web and mobile. The platform includes features such as video playback, commenting, like/dislike functionality, video uploading, and user management. This document details the structure and implementation of the ViewTube project, covering the Web frontend, Android mobile application, and Server-Side backend, including the TCP Server.
 
 ## Screenshots
 ![Screenshot 1](./Server/public/static/project%20screenshots/5.png)
@@ -25,6 +25,13 @@ ViewTube is a comprehensive video-sharing platform that allows users to upload, 
 - **User Management**: Create and manage user profiles, including likes, uploads, and comments.
 - **Dark Mode**: Toggle between light and dark modes to match personal preferences.
 
+### TCP Server
+The TCP server is an integral component of the ViewTube platform, responsible for managing user watch history and providing video recommendations.
+- **User Watch History**: Tracks which videos a user has watched and updates the MongoDB database accordingly.
+- **Video Recommendations**: Suggests videos to users based on what others who watched the same videos have also seen.
+- **Multithreading**: Handles multiple clients simultaneously using multithreading.
+- **Graceful Shutdown**: Uses signal handling to shut down the server gracefully upon receiving a termination signal.
+
 ## Technologies Used
 
 ### Web Frontend
@@ -43,6 +50,13 @@ ViewTube is a comprehensive video-sharing platform that allows users to upload, 
 - **Database**: MongoDB (with Mongoose for object modeling)
 - **Authentication**: JWT (JSON Web Tokens)
 - **File Handling**: Multer (for video file and thumbnail uploads)
+
+### TCP Server
+- **Programming Language**: C++
+- **Database**: MongoDB
+- **Multithreading**: C++ threads are used to handle multiple client requests concurrently.
+- **Socket Programming**: Uses sockets for client-server communication.
+- **Signal Handling**: Implements graceful server shutdown using SIGINT signal.
 
 ## Installation and Setup
 
