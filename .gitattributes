@@ -1,6 +1,0 @@
-*.js linguist-language=JavaScript
-*.cpp linguist-language=C++
-*.java linguist-language=Java
-*.html linguist-language=HTML
-*.css linguist-language=CSS
-*.md linguist-documentation
