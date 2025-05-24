@@ -88,7 +88,7 @@ The TCP server is an integral component of the ViewTube platform, responsible fo
 #### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/ZivElbaz/android-video-sharing-platform
+   git clone https://github.com/ofekbaribi/android-video-sharing-platform
    ```
 
 2. **Open and Run the Project**:
